@@ -11,25 +11,21 @@ return new class extends Migration
      */
     public function up(): void
     {
+        if (!Schema::hasTable('bookings')) {
         Schema::create('bookings', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('billboard_id')->constrained('billboards')->onDelete('cascade');
-            $table->foreignId('advertiser_id')->constrained('users')->onDelete('cascade');
-            $table->foreignId('owner_id')->constrained('users')->onDelete('cascade');
-            // Booking period
+            $table->unsignedBigInteger('billboard_id');
+            $table->unsignedBigInteger('advertiser_id');
+            $table->unsignedBigInteger('owner_id');
             $table->date('start_date');
             $table->date('end_date');
             $table->string('video_path');
-            $table->enum("admin_approval",['pending', 'approved', 'denied'])->default('pending');
+            $table->enum('admin_approval', ['pending','approved','denied'])->default('pending');
             $table->decimal('net_payment', 10, 2)->default(0);
-            // Price and payment
             $table->decimal('price', 10, 2);
-            $table->enum('payment_status', ['pending', 'paid', 'failed', 'refunded'])->default('pending');
+            $table->enum('payment_status', ['pending','paid','failed','refunded'])->default('pending');
             $table->timestamps();
-            // Indexes for search/filter
-            $table->index(['payment_status']);
-
-        });
+        });}
     }
 
     /**
