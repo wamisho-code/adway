@@ -27,6 +27,9 @@ Route::post('/signup/register',[AuthController::class,'registerNewUser'])->name(
 Route::post('/login/loginuser',[AuthController::class,'loginUser'])->name('login.user');
 Route::get('/forget-password',[AuthController::class,'forgetPassword'])->name('forget-password');
 Route::post('/get-new-pasword',[MailController::class,'sendEmailToUser'])->name('get-new-pass');
+Route::get('/aboutus',function(){
+    return view('aboutus');
+})->name("aboutus");
 Route::get('/logout',[AuthController::class,'logout'])->name('logout');
 Route::post('/contact-us-mail',[MailController::class,'sendMailToCompany'])->name("contact-us-mail");
 Route::get('/billboards',[BillBoardController::class,'billboards'])->name("billboards");

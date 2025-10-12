@@ -275,7 +275,7 @@
             </div>
             <div class="booking-info">
                 <p><strong>Billboard Title:</strong> <span class="value">{{ $booking->billboard->title }}</span></p>
-                <p><strong>Billboard Owner:</strong> <span class="value">{{ $booking->owner->name }}</span></p>
+                {{-- <p><strong>Billboard Owner:</strong> <span class="value">{{ $booking->owner->name }}</span></p> --}}
                 <p><strong>Billboard Location:</strong> <span class="value">{{ $booking->billboard->location }}</span></p>
                 <p><strong>Start Date:</strong> <span
                         class="value">{{ \Carbon\Carbon::parse($booking->start_date)->format('M d, Y') }}</span></p>

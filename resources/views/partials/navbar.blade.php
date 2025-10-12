@@ -32,11 +32,8 @@
                 </a>
             @endif
 
-            <a href="#">About us</a>
-            <a href="#">Contact us</a>
-            <a href="#">
-                <i style="margin-right: 5px;" class="fa-solid fa-circle-info"></i>Help Center / FAQ
-            </a>
+            <a href="{{route('aboutus')}}">About us</a>
+            
             @if(Auth::check() && Auth::user()->is_admin == 'yes')
                 <a href="{{ route('admin') }}">Admin</a>
             @endif
