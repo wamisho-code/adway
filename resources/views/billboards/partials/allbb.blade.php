@@ -10,7 +10,201 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     /* Preserve your glass styles */
-    
+    html {
+      scroll-behavior: smooth;
+    }
+  * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  header {
+      background-color: #0d1a26;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+      padding: 0 40px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+  }
+
+  /* Navigation container */
+  nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+  }
+  #logos{
+      display: flex;
+      justify-content: space-evenly;
+      gap: 10px;
+      padding: 8px 0;
+      align-items: center;
+  }
+
+  /* Logo and title */
+  nav>div:first-child {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+  }
+
+  nav img {
+      height: 48px;
+      filter: brightness(1.1);
+  }
+
+  nav h1 {
+      color: #f2f4f8;
+      font-weight: 700;
+      font-size: 24px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+  }
+
+  /* Navigation links */
+  nav>div:nth-child(2) {
+      display: flex;
+      gap: 24px;
+  }
+
+  nav a {
+      color: #cbd5e1;
+      font-weight: 500;
+      font-size: 15px;
+      padding: 10px 14px;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  nav a:hover {
+      background-color: rgba(255, 255, 255, 0.08);
+      color: #ffffff;
+  }
+
+  /* User login/profile button */
+  .nav-user-link {
+      background-color: #1f2a40;
+      color: #ffffff;
+      padding: 9px 22px;
+      font-weight: 600;
+      font-size: 15px;
+      border: none;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      box-shadow: inset 0 0 0 1px #3a4f6c;
+      transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+
+  .nav-user-link:hover {
+      background-color: #3a4f6c;
+      color: #e2e8f0; }
+  
+  #billboardlist {
+      scroll-margin-top: 100px;
+      /* match or exceed your header height */
+  }
+  /* Responsive - stack nav on small screens */
+  /* HAMBURGER BUTTON */
+  .hamburger {
+      display: none;
+      position: absolute;
+      top: 10px;
+      /* Adjust spacing from the top */
+      right: 0px;
+      /* Adjust spacing from the right */
+      z-index: 1000;
+      font-size: 24px;
+      color: #cbd5e1;
+      margin-right: 10px;
+      /* match navbar background */
+      
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+  }
+  .hamburger i {
+      transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  .hamburger.active i {
+      transform: rotate(180deg) scale(1.2);
+      color: #38bdf8;
+  }
+
+  /* MOBILE MENU LOGIC */
+  @media (max-width: 768px) {
+      .hamburger {
+          display: block;
+      }
+
+      nav#mainNav {
+          position: relative;
+          flex-direction: column;
+          align-items: flex-start;
+          height: auto;
+      }
+
+      nav#mainNav .nav-links,
+      nav#mainNav .nav-user {
+          display: none;
+          width: 100%;
+          flex-direction: column;
+          gap: 10px;
+          background-color: #0d1a26;
+          padding: 10px 0;
+          border-top: 1px solid #233243;
+      }
+
+      nav#mainNav.open .nav-links,
+      nav#mainNav.open .nav-user {
+          display: flex;
+      }
+
+      nav#mainNav .nav-links a,
+      nav#mainNav .nav-user a {
+          padding-left: 20px;
+      }
+      #logos img{
+          height: 30px;
+      }
+      #logos h1 {
+          font-size: 26px;
+      }
+  }
+  @media (max-width: 768px) {
+      nav {
+          flex-direction: column;
+          height: auto;
+          gap: 15px;
+      }
+
+      nav>div:nth-child(2) {
+          gap: 20px;
+      }
+
+      nav a {
+          font-size: 14px;
+          padding: 8px 12px;
+      }
+
+      nav button {
+          width: 100%;
+          justify-content: center;
+      }
+     
+
+     
+  }
+
     .glass-card {
       background: rgba(255, 255, 255, 0.8);
       backdrop-filter: blur(12px);
