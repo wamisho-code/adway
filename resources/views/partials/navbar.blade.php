@@ -312,10 +312,10 @@ nav a:hover {
 <header>
     <nav id="mainNav">
         <!-- Left: Logo + Title -->
-        <div id="logohoder">
+        <div id="logohoder" style="display: flex;align-items: center; ">
             <div id="logos">
                 <img src="{{ asset('img/logo_white.png') }}" alt="logo">
-                <h1>Liyu Ad</h1>
+                <h1 style=" margin:0 10px;">Liyu Ad</h1>
             </div>
         </div>
        
