@@ -5,18 +5,18 @@
             <h2>Get in Touch</h2>
             <p>Have questions or want to work together? Send us a message!</p>
             <ul>
-                <li><i class="fas fa-phone"></i> +1 123 456 7890</li>
-                <li><i class="fas fa-envelope"></i> contact@yourdomain.com</li>
+                <li><i class="fas fa-phone"></i> +251 940 127 614</li>
+                <li><i class="fas fa-envelope"></i> Liyuadinfo@gmail.com</li>
                 <li><i class="fas fa-map-marker-alt"></i> 123 Main St, Your City</li>
             </ul>
             <form id="contactForm" method="POST" class="contact-form" action="{{route('contact-us-mail')}}">
                 @csrf
                 <input type="text" name="name" placeholder="Your Name" required autocomplete="name"  value="{{
-                Auth::check() ? 
-                    Auth::user()->name : " "
+    Auth::check() ?
+    Auth::user()->name : " "
                 }}"/>
                 <input type="email" name="email" placeholder="Your Email" required autocomplete="email" value="{{
-                Auth::check()? Auth::user()->email: " "
+    Auth::check() ? Auth::user()->email : " "
                 }}" />
                 <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
                 <button type="submit">Send Message <i class="fas fa-paper-plane"></i></button>

@@ -129,15 +129,15 @@
       <h2>Quick Links</h2>
       <ul>
         <li><a href="{{ route('home') }}">Home</a></li>
-        <li><a href="#">Browse Billboards</a></li>
+        <li><a href="{{ route('billboards') }}">Browse Billboards</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
     </div>
 
     <div class="footer-section">
       <h2>Contact</h2>
-      <p><i class="fas fa-envelope"></i> info@billboards.et</p>
-      <p><i class="fas fa-phone"></i> +251 911 123 456</p>
+      <p><i class="fas fa-envelope"></i>Liyuadinfo@gmail.com</p>
+      <p><i class="fas fa-phone"></i> +251 940 127 614</p>
     </div>
   </div>
 

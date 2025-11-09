@@ -314,8 +314,8 @@ nav a:hover {
         <!-- Left: Logo + Title -->
         <div id="logohoder">
             <div id="logos">
-                <img src="{{ asset('img/app_logo.png') }}" alt="logo">
-                <h1>Adway</h1>
+                <img src="{{ asset('img/logo_white.png') }}" alt="logo">
+                <h1>Liyu Ad</h1>
             </div>
         </div>
        

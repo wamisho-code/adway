@@ -163,7 +163,7 @@ body {
 <body>
     <div class="registration-container">
         <div class="logo">
-            <img src="{{asset('img/app_logo.png') }}" alt="logo">
+            <img src="{{asset('img/logo_blue.png') }}" alt="logo">
             <h1>Registration</h1>
         </div>
         <div class="form-wrapper">
